@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520" role="img" aria-label="Exemplo da agenda do dia no painel">
+  <rect width="640" height="520" fill="#EEF1F5"/>
+  <rect x="24" y="24" width="592" height="472" rx="16" fill="#FFFFFF"/>
+  <text x="48" y="68" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#14213D">Agenda de hoje</text>
+  <text x="48" y="92" font-family="Arial, sans-serif" font-size="14" fill="#5B6577">3 profissionais · 8 horários marcados</text>
+  <g stroke="#D5DBE5" stroke-width="1">
+    <line x1="48" y1="124" x2="592" y2="124"/>
+    <line x1="48" y1="204" x2="592" y2="204"/>
+    <line x1="48" y1="284" x2="592" y2="284"/>
+    <line x1="48" y1="364" x2="592" y2="364"/>
+    <line x1="48" y1="444" x2="592" y2="444"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="13" fill="#5B6577">
+    <text x="48" y="146">09:00</text>
+    <text x="48" y="226">10:00</text>
+    <text x="48" y="306">11:00</text>
+    <text x="48" y="386">14:00</text>
+  </g>
+  <rect x="112" y="132" width="230" height="62" rx="10" fill="#14213D"/>
+  <text x="128" y="158" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Corte + barba</text>
+  <text x="128" y="180" font-family="Arial, sans-serif" font-size="13" fill="#C9D3E6">Rafael · com Diego</text>
+  <rect x="360" y="132" width="232" height="62" rx="10" fill="#C8102E"/>
+  <text x="376" y="158" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Corte social</text>
+  <text x="376" y="180" font-family="Arial, sans-serif" font-size="13" fill="#FBD5DB">Marcos · com Léo</text>
+  <rect x="112" y="212" width="230" height="62" rx="10" fill="#E3E8F1"/>
+  <text x="128" y="238" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#14213D">Barba</text>
+  <text x="128" y="260" font-family="Arial, sans-serif" font-size="13" fill="#5B6577">Thiago · com Diego</text>
+  <rect x="360" y="292" width="232" height="62" rx="10" fill="#14213D"/>
+  <text x="376" y="318" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Pigmentação</text>
+  <text x="376" y="340" font-family="Arial, sans-serif" font-size="13" fill="#C9D3E6">André · com Léo</text>
+  <rect x="112" y="372" width="480" height="62" rx="10" fill="none" stroke="#C8102E" stroke-width="2" stroke-dasharray="6 6"/>
+  <text x="128" y="408" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#C8102E">Horário livre para agendar</text>
+</svg>

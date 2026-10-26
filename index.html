@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EasyAgenda+ é a agenda online para barbearias e salões: o cliente marca sozinho e você acompanha tudo no painel.">
+  <title>EasyAgenda+ | Agenda online para barbearias</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <a href="#inicio" class="logo">EasyAgenda+</a>
+    <nav class="menu" aria-label="Navegação principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#contato" class="menu__destaque">Falar com a gente</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+
+    <section class="hero">
+      <div class="hero__texto">
+        <h1>O cliente marca sozinho. Você só corta.</h1>
+        <p>
+          O EasyAgenda+ é a agenda online para barbearias e salões. O cliente
+          escolhe serviço, profissional e horário por um link, e você acompanha
+          tudo em um painel simples.
+        </p>
+        <div class="hero__acoes">
+          <a href="#contato" class="botao">Quero testar na minha barbearia</a>
+          <a href="#recursos" class="link-simples">Ver recursos</a>
+        </div>
+      </div>
+      <img class="hero__imagem" src="img/agenda.svg" alt="Painel mostrando a agenda do dia com horários marcados e um horário livre">
+    </section>
+
+    <section id="sobre" class="secao sobre">
+      <div class="sobre__texto">
+        <h2>Marcar horário por mensagem toma tempo demais</h2>
+        <p>
+          Entre um corte e outro, o barbeiro para para responder “tem
+          horário às 15h?”. O cliente espera, o horário esfria e a agenda
+          fica cheia de buracos.
+        </p>
+        <p>
+          Com o EasyAgenda+, os horários livres ficam visíveis o tempo todo.
+          Quem quer cortar o cabelo escolhe, confirma e pronto.
+        </p>
+      </div>
+
+      <aside class="hoje" aria-label="Exemplo de agenda do dia">
+        <h3>Hoje na agenda</h3>
+        <ul>
+          <li><span>09:00</span> Corte + barba, Rafael Almeida Nascimento de Souza</li>
+          <li><span>10:00</span> Barba, Thiago Mendes Albuquerque Filho</li>
+          <li><span>11:00</span> Pigmentação, André Luiz Carvalho Barbosa</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="recursos" class="secao recursos">
+      <h2>Tudo o que a recepção faz hoje, sem a recepção</h2>
+      <ul class="recursos__lista">
+        <li>
+          <h3>Agenda por profissional</h3>
+          <p>Cada barbeiro tem a própria agenda, com horário de trabalho, pausas e folgas.</p>
+        </li>
+        <li>
+          <h3>Lembretes pelo WhatsApp</h3>
+          <p>O cliente recebe um aviso antes do horário e falta menos.</p>
+        </li>
+        <li>
+          <h3>Catálogo de serviços</h3>
+          <p>Cadastre serviços, duração e preço. O link de agendamento já mostra tudo isso.</p>
+        </li>
+        <li>
+          <h3>Resumo do dia e do mês</h3>
+          <p>Veja quantos atendimentos foram feitos e quanto cada serviço rendeu.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="como-funciona" class="secao passos">
+      <h2>Como funciona</h2>
+      <ol class="passos__lista">
+        <li>
+          <h3>Você cadastra a barbearia</h3>
+          <p>Serviços, profissionais e horários de atendimento.</p>
+        </li>
+        <li>
+          <h3>Divulga o link</h3>
+          <p>Coloque no Instagram, no Google e na bio do WhatsApp.</p>
+        </li>
+        <li>
+          <h3>O cliente escolhe e confirma</h3>
+          <p>O horário aparece na agenda na hora, sem ninguém digitar.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="contato" class="contato">
+      <div class="contato__texto">
+        <h2>Quer ver na sua barbearia?</h2>
+        <p>Deixe seu contato e a gente responde com os próximos passos.</p>
+      </div>
+
+      <!-- Troque action="#" pelo endereço do seu backend, Formspree, etc. -->
+      <form class="formulario" action="#" method="post">
+        <label for="nome">Seu nome</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="whatsapp">WhatsApp</label>
+        <input type="tel" id="whatsapp" name="whatsapp" placeholder="(83) 90000-0000" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email">
+
+        <button type="submit" class="botao">Enviar contato</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <p>&copy; 2026 EasyAgenda+. Projeto de portfólio criado no desafio de CSS da DIO.</p>
+  </footer>
+
+</body>
+</html>

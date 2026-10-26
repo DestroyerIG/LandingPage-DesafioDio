@@ -1,0 +1,446 @@
+/* ==========================================================
+   EasyAgenda+ | Landing page (desafio CSS DIO)
+   ========================================================== */
+
+/* Fontes: troque por @font-face se quiser hospedar os arquivos */
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap");
+
+/* ---------- Variáveis ---------- */
+:root {
+  --tinta: #14213d;
+  --polo: #c8102e;
+  --aco: #eef1f5;
+  --papel: #ffffff;
+  --texto: #2b3445;
+  --texto-suave: #5b6577;
+  --linha: #d5dbe5;
+
+  --fonte-titulo: "Bricolage Grotesque", "Arial Black", sans-serif;
+  --fonte-corpo: "DM Sans", Arial, sans-serif;
+
+  --margem: 6vw;
+}
+
+/* ---------- Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  font-family: var(--fonte-corpo);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--texto);
+  background-color: var(--papel);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fonte-titulo);
+  line-height: 1.1;
+  color: var(--tinta);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--polo);
+  outline-offset: 3px;
+}
+
+/* ---------- Topo ---------- */
+.topo {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem var(--margem);
+  background-color: var(--tinta);
+  color: var(--papel);
+}
+
+.logo {
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  font-size: 1.35rem;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  font-size: 0.95rem;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.menu .menu__destaque {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background-color: var(--polo);
+  font-weight: 700;
+}
+
+.menu .menu__destaque:hover {
+  text-decoration: none;
+  filter: brightness(1.12);
+}
+
+/* ---------- Botões e links ---------- */
+.botao {
+  display: inline-block;
+  padding: 0.9rem 1.6rem;
+  border: 0;
+  border-radius: 8px;
+  background-color: var(--polo);
+  color: var(--papel);
+  font-family: var(--fonte-corpo);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.botao:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.link-simples {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 4vw;
+  min-height: 90vh;
+  padding: 5rem var(--margem) 5rem calc(var(--margem) + 2.5rem);
+  background-color: var(--tinta);
+  color: var(--papel);
+  overflow: hidden;
+}
+
+/* Poste de barbeiro: o único elemento animado da página */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 1.75rem;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--polo) 0 16px,
+    var(--papel) 16px 32px,
+    #2f5aa8 32px 48px,
+    var(--papel) 48px 64px
+  );
+  background-size: 100% 90.5px;
+  animation: girar-poste 2.4s linear infinite;
+}
+
+@keyframes girar-poste {
+  to {
+    background-position: 0 90.5px;
+  }
+}
+
+.hero h1 {
+  max-width: 14ch;
+  font-size: clamp(2.6rem, 6vw, 4.75rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--papel);
+}
+
+.hero__texto p {
+  max-width: 52ch;
+  margin: 1.5rem 0 2rem;
+  font-size: 1.15rem;
+  color: #d6deec;
+}
+
+.hero__acoes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero__imagem {
+  width: 100%;
+  height: 26rem;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 14px 14px 0 var(--polo);
+}
+
+/* ---------- Seções ---------- */
+.secao {
+  padding: 6rem var(--margem);
+}
+
+.secao h2 {
+  font-size: clamp(1.9rem, 3.6vw, 2.9rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- Sobre ---------- */
+.sobre {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: start;
+  gap: 5vw;
+}
+
+.sobre__texto h2 {
+  max-width: 18ch;
+  margin-bottom: 1.5rem;
+}
+
+.sobre__texto p {
+  max-width: 60ch;
+}
+
+/* combinador de irmão adjacente */
+.sobre__texto p + p {
+  margin-top: 1rem;
+}
+
+.hoje {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: var(--aco);
+  box-shadow: inset 0 0 0 1px var(--linha), inset 0 6px 14px rgba(20, 33, 61, 0.08);
+}
+
+.hoje h3 {
+  margin-bottom: 1rem;
+  font-size: 1.15rem;
+}
+
+.hoje li {
+  padding: 0.7rem 0;
+  border-top: 1px solid var(--linha);
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hoje li span {
+  display: inline-block;
+  width: 3.4rem;
+  font-weight: 700;
+  color: var(--polo);
+}
+
+/* ---------- Recursos ---------- */
+.recursos {
+  background-color: var(--aco);
+}
+
+.recursos h2 {
+  max-width: 22ch;
+}
+
+.recursos__lista {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 5vw;
+  margin-top: 3rem;
+}
+
+.recursos__lista li {
+  padding: 1.75rem 0;
+  border-top: 2px solid var(--tinta);
+}
+
+.recursos__lista h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.recursos__lista p {
+  max-width: 44ch;
+  color: var(--texto-suave);
+}
+
+/* ---------- Como funciona (sequência real, então numerada por contador) ---------- */
+.passos__lista {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3vw;
+  margin-top: 3rem;
+  counter-reset: passo;
+}
+
+.passos__lista li {
+  counter-increment: passo;
+}
+
+.passos__lista li::before {
+  content: counter(passo);
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1.25rem;
+  border-radius: 50%;
+  background-color: var(--tinta);
+  color: var(--papel);
+  font-family: var(--fonte-titulo);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.passos__lista h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.passos__lista p {
+  color: var(--texto-suave);
+}
+
+/* ---------- Contato ---------- */
+.contato {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 5vw;
+  padding: 6rem var(--margem);
+  background-color: var(--tinta);
+  color: var(--papel);
+}
+
+.contato h2 {
+  max-width: 14ch;
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  color: var(--papel);
+}
+
+.contato__texto p {
+  max-width: 40ch;
+  color: #d6deec;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 14px;
+  background-color: var(--papel);
+  color: var(--texto);
+}
+
+.formulario label {
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--tinta);
+}
+
+.formulario input {
+  margin-bottom: 1.1rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--linha);
+  border-radius: 8px;
+  font-family: var(--fonte-corpo);
+  font-size: 1rem;
+  box-shadow: inset 2px 2px 5px rgba(20, 33, 61, 0.1);
+}
+
+.formulario input::placeholder {
+  color: #8b95a7;
+}
+
+.formulario .botao {
+  margin-top: 0.5rem;
+}
+
+/* ---------- Rodapé ---------- */
+.rodape {
+  padding: 1.75rem var(--margem);
+  background-color: #0d1629;
+  color: #aab4c8;
+  font-size: 0.9rem;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 860px) {
+  .menu a:not(.menu__destaque) {
+    display: none;
+  }
+
+  .hero,
+  .sobre,
+  .contato {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 3.5rem var(--margem) 4rem calc(var(--margem) + 1.75rem);
+  }
+
+  .hero__imagem {
+    height: 18rem;
+    box-shadow: 8px 8px 0 var(--polo);
+  }
+
+  .secao {
+    padding: 4rem var(--margem);
+  }
+
+  .recursos__lista,
+  .passos__lista {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Acessibilidade: respeita quem reduz movimento ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero::before {
+    animation: none;
+  }
+
+  .botao {
+    transition: none;
+  }
+}
